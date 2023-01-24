@@ -56,3 +56,20 @@ console.log(output);
 fun1();
 // Call the function "fun2"
 fun2();
+
+
+// Refactor 👆code
+
+function convertTemperature(celsius, decimalPlaces) {
+  // celsius to fahrenheit
+decimalPlaces = decimalPlaces || 1;
+const fahrenheit = celsius * 1.8 + 32;
+return Number(fahrenheit.toFixed(decimalPlaces));
+}
+
+console.log(convertTemperature(21)); // returns 69.8. What if we dont want decimal places  
+// to provide an integer 
+
+// use the string method .toFixed() to round the number to the nearest integer. it returns a STRING. we need to convert it to a number. we can use the Number() function to do that.
+
+console.log(convertTemperature(21));
